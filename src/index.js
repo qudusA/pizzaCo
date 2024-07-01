@@ -96,7 +96,7 @@ function Menu() {
 function Footer() {
   const openHour = 12;
   const closingHour = 22;
-  const currentHour = 12;
+  const currentHour = 23;
   const isOpen = currentHour >= openHour && currentHour <= closingHour;
   console.log(isOpen);
 
@@ -104,7 +104,9 @@ function Footer() {
     <div className="footer">
       {isOpen && (
         <div>
-          <p className="">{new Date().toLocaleDateString()} we're open</p>
+          <p className="">
+            we're open until {closingHour}:00 come visit us or order online
+          </p>
           <button>Order Now</button>
         </div>
       )}
