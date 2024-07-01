@@ -1,0 +1,109 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* border: 1px solid red; */
+  padding: 5px;
+  border-bottom: 10px solid orange;
+}
+
+.page div header {
+  margin-bottom: 40px;
+}
+
+header > h1 {
+  text-transform: uppercase;
+  color: orange;
+  text-align: center;
+}
+
+.upper-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+  /* justify-content: center; */
+}
+
+h2 {
+  border: 3px solid black;
+  padding: 5px 0px;
+  border-right: 0;
+  border-left: 0;
+  width: fit-content;
+  /* text-align: center; */
+}
+
+.comment {
+  text-align: center;
+  /* border: 1px solid red; */
+  width: 70%;
+  margin-bottom: 15px;
+}
+
+.pizza {
+  display: flex;
+  align-items: center;
+  /* border: 1px solid red; */
+  width: 100%;
+}
+
+.img {
+  margin-right: 15px;
+}
+
+img {
+  width: auto;
+  height: 100px;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 17px;
+  width: 100%;
+  /* border: 1px solid red; */
+}
+
+.info .p {
+  /* border: 1px solid red; */
+  text-wrap: wrap;
+  width: 80%;
+}
+
+.pizza-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+  /* border: 1px solid red; */
+}
+
+.footer {
+  display: flex;
+  margin-top: 10px;
+  /* border: 1px solid red; */
+  justify-content: center;
+  justify-content: center;
+}
+
+.footer div {
+  display: flex;
+  flex-direction: column;
+  /* border: 1px solid red; */
+  align-items: center;
+  gap: 10px;
+}
+
+button {
+  background-color: orange;
+  padding: 10px 25px;
+  border-radius: 3px;
+  border: none;
+  width: fit-content;
+}
