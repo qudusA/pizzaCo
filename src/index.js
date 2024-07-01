@@ -77,9 +77,9 @@ function Menu() {
         </p>
       </div>
       <ul className="pizza-container">
-        {pizzaData.map((pizza) => (
-          <Pizza pizzaObj={pizza} />
-        ))}
+        {pizzaData.map((pizza) =>
+          !pizza.soldOut ? <Pizza pizzaObj={pizza} /> : null
+        )}
       </ul>
     </div>
   );
@@ -94,12 +94,20 @@ function Menu() {
 //     return <p>Authentic nigerian cusine with 6 creative dishes to choose from All from our stone oven. all organic, all delicious.</p>
 // }
 function Footer() {
+  const openHour = 12;
+  const closingHour = 22;
+  const currentHour = 12;
+  const isOpen = currentHour >= openHour && currentHour <= closingHour;
+  console.log(isOpen);
+
   return (
     <div className="footer">
-      <div>
-        <p className="">{new Date().toLocaleDateString()} we're open</p>
-        <button>Order Now</button>
-      </div>
+      {isOpen && (
+        <div>
+          <p className="">{new Date().toLocaleDateString()} we're open</p>
+          <button>Order Now</button>
+        </div>
+      )}
     </div>
   );
 }
